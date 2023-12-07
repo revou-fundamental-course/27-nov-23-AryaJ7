@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kalkulator.css">
+    <script src="kalkulator.js"></script>
+    <title>Kalkulator Segitiga</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="calculator">
+            <h1>Kalkulator Segitiga</h1>
+
+            <div id="errorMessage" class="error-message"></div>
+
+            <form id="triangleForm">
+                <label for="triangleType">Jenis Segitiga:</label>
+                <select id="triangleType" onchange="updateInputs()">
+                    <option value="equilateral">Sama Sisi</option>
+                    <option value="isosceles">Sama Kaki</option>
+                    <option value="right-angled">Siku-Siku</option>
+                    <option value="scalene">Sembarang</option>
+                </select>
+
+                <label for="calculationType">Jenis Perhitungan:</label>
+                <select id="calculationType">
+                    <option value="area">Luas</option>
+                    <option value="perimeter">Keliling</option>
+                </select>
+
+                <label for="sideA">Sisi A (cm):</label>
+                <input type="number" id="sideA" required>
+
+                <label for="sideB">Sisi B (cm):</label>
+                <input type="number" id="sideB" required>
+
+                <label for="sideC">Sisi C (cm):</label>
+                <input type="number" id="sideC" required>
+
+                <label for="angleA">Sudut A (opsional):</label>
+                <input type="number" id="angleA">
+
+                <label for="angleB">Sudut B (opsional):</label>
+                <input type="number" id="angleB">
+
+                <label for="angleC">Sudut C (opsional):</label>
+                <input type="number" id="angleC">
+
+                <button type="button" onclick="calculate">Hitung</button>
+            </form>
+            
+            <div id="resultArea" class="result-container">
+                <div id="resultBox" class="result-box"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
